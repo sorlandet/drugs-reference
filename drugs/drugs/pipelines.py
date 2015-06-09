@@ -23,7 +23,7 @@ class DrugsPipeline(object):
         session = self.Session()
 
         drug = Drug(**item)
-        drug.status = 0
+        drug.status = 'raw'
 
         try:
             session.add(drug)

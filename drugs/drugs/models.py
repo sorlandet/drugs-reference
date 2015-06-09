@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, TIMESTAMP, text, UniqueConstraint, Unicode
+from sqlalchemy import create_engine, Column, Integer, String, TIMESTAMP, text, UniqueConstraint, UnicodeText
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.engine.url import URL
 
@@ -24,7 +24,10 @@ class Drug(DeclarativeBase):
     __tablename__ = "drug"
     __table_args__ = (
         UniqueConstraint('latname', 'atc_code', name='_latc_uc'),
-        {'mysql_engine': 'MyISAM'}
+        {
+            'mysql_engine': 'MyISAM',
+            'mysql_charset': 'utf8'
+        }
     )
 
     id = Column(Integer, primary_key=True)
@@ -34,7 +37,7 @@ class Drug(DeclarativeBase):
     latname = Column('latname', String(250), nullable=True)
     active_component = Column('active_component', String(250), nullable=True)
     atc_code = Column('atc_code', String(50), nullable=True)
-    tn_content = Column('tn_content', String(10), nullable=True)
+    tn_content = Column('tn_content', UnicodeText(), nullable=True)
 
     status = Column(String(10), unique=False, nullable=True)
 
