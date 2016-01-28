@@ -7,4 +7,5 @@
 
 *.db
 
+/rlsnet.ru.sql
 *.log
