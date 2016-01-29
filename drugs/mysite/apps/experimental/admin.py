@@ -5,12 +5,13 @@ from .models import Raw, ActiveComponent
 
 class ActiveComponentInline(admin.StackedInline):
     model = ActiveComponent
-    extra = 3
+    extra = 0
+
 
 class RawAdmin(admin.ModelAdmin):
-    list_filter = ['phase1']
-    list_display = ['title_orig', 'title_rus', 'url', 'phase1']
-    fields = ['title_orig', 'title_rus', 'context', 'url']
+    list_filter = ['phase1', 'phase2', 'phase3']
+    list_display = ['title_orig', 'title_rus', 'url', 'phase1', 'phase2', 'phase3']
+    fields = ['title_orig', 'title_rus', 'context', 'url', 'active_components', 'atc_code']
     search_fields = ['title_orig', 'title_rus']
 
     inlines = [ActiveComponentInline]

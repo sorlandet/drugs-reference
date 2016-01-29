@@ -7,8 +7,11 @@ class Raw(models.Model):
     context = models.TextField()
     url = models.CharField(max_length=255, unique=True)
 
+    active_components = models.TextField(null=True)
+    atc_code = models.CharField(max_length=255, null=True)
+
     phase1 = models.NullBooleanField(help_text='for active components gathering')
-    phase2 = models.NullBooleanField()
+    phase2 = models.NullBooleanField(help_text='for atc code gathering')
     phase3 = models.NullBooleanField()
     phase4 = models.NullBooleanField()
     phase5 = models.NullBooleanField()
