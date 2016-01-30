@@ -11,8 +11,8 @@ class Raw(models.Model):
     atc_code = models.CharField(max_length=255, null=True)
 
     phase1 = models.NullBooleanField(help_text='for active components gathering')
-    phase2 = models.NullBooleanField(help_text='for atc code gathering')
-    phase3 = models.NullBooleanField()
+    phase2 = models.NullBooleanField(help_text='for active components gathering')
+    phase3 = models.NullBooleanField(help_text='for atc code gathering')
     phase4 = models.NullBooleanField()
     phase5 = models.NullBooleanField()
     phase6 = models.NullBooleanField()
