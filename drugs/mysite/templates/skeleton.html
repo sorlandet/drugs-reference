@@ -1,0 +1,67 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html class="aui ltr rpst-portal" dir="ltr" lang="ru-RU">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=320, user-scalable=no">
+    <title>{% block title %}{% endblock %}</title>
+
+    {% comment %}
+    <meta name="google-site-verification" content="{Put verification-code from Google Search Console}" />
+    {% endcomment %}
+
+    {% comment %}
+    <meta property="og:image"
+          content="https://www.pochta.ru/documents/10231/0/pochta+social.png/6696e4cc-9223-41a4-b9d6-384148319363?t=1441629698686" />
+    {% endcomment %}
+
+    <!--[if lt IE 8]>
+    <meta http-equiv="refresh" content="0; url=/unsupportedBrowser">
+    <![endif]-->
+
+    <link href="//fonts.googleapis.com/css?family=Roboto:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <link href="{% static 'style/style.css' %}" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+    <link href="{% static 'style/style-ie.css' %}" rel="stylesheet" type="text/css">
+    <![endif]-->
+
+    <script src="//cdn.polyfill.io/v1/polyfill.min.js" async defer></script>
+
+    <script src="{% static 'js/libs.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/components.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/app.js' %}" type="text/javascript"></script>
+
+
+    <link href="{% static 'images/favicon.png' %}" rel="Shortcut Icon" />
+
+    <link href="http://development.local" rel="canonical" />
+    <link href="http://development.local" hreflang="x-default" rel="alternate" />
+    <link href="http://development.local" hreflang="ru-RU" rel="alternate" />
+
+    <link class="lfr-css-file" href="{% static 'style/theme/aui.css' %}" rel="stylesheet" type="text/css" />
+    <link class="lfr-css-file" href="{% static 'style/theme/main.css' %}" rel="stylesheet" type="text/css" />
+
+    {% block extra_css %}<style type="text/css"></style>{% endblock %}
+
+    {% comment %}
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">(function(g,a,i){(a[i]=a[i]||[]).push(function(){try{a.yaCounter30744873=new Ya.Metrika({id:30744873,webvisor:true,clickmap:true,trackLinks:true,accurateTrackBounce:true})}catch(c){}});var h=g.getElementsByTagName("script")[0],b=g.createElement("script"),e=function(){h.parentNode.insertBefore(b,h)};b.type="text/javascript";b.async=true;b.src=(g.location.protocol=="https:"?"https:":"http:")+"//mc.yandex.ru/metrika/watch.js";if(a.opera=="[object Opera]"){g.addEventListener("DOMContentLoaded",e,false)}else{e()}})(document,window,"yandex_metrika_callbacks");</script>
+    <noscript><div><img src="//mc.yandex.ru/watch/30744873" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    {% endcomment %}
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    {% block header %}{% endblock %}
+    {% block main %}{% endblock %}
+    {% block footer %}{% endblock %}
+
+    {% block extra_js %}<script type="text/javascript"></script>{% endblock %}
+
+</body>
+</html>
