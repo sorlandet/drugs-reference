@@ -17,36 +17,72 @@
     </div>
 {% endblock %}
 
-{% block main %}
-<div class="columns-1" id="main-content" role="main"></div>
-{% endblock %}
+
+<div class="columns-1" id="main-content" role="main">
+    <div class="portlet-layout row-fluid">
+        <div class="portlet-column portlet-column-only span12" id="column-1">
+            <div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-1">
+                <div class="portlet-boundary portlet-boundary_trackingPortlet_WAR_portalportlet_ portlet-static portlet-static-end portlet-borderless " id="p_p_id_trackingPortlet_WAR_portalportlet_" >
+                    <span id="p_trackingPortlet_WAR_portalportlet"></span>
+                    <div class="portlet-borderless-container" style="">
+                        <div class="portlet-body">
+                            {% block main %}{% endblock %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 {% block footer %}
 <div class="footer-container">
     <div class="footer__map ">
         <div class="footer__map-section footer__map-section-otpravlenia">
-            <div class="footer__map-section-title">Заголовок 1</div>
+            <div class="footer__map-section-title">Энциклопедия лекарств</div>
             <ul class="footer__map-section-links">
                 <li class="footer__map-section-link">
-                    <a href="/" >Меню 1.1</a>
+                    <a href="{% url 'alphabet' %}">Алфавитный указатель</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/" >Меню 1.2</a>
+                    <a href="/" >Действующие вещества</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/" >Меню 1.3</a>
+                    <a href="/" >Взаимодействие лекарств</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >Лекарственные формы</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >Справочник болезней</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >АТХ классификация</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >Фармакологические группы</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >Фармакологическое действие</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >Производители лекарств</a>
+                </li>
+                <li class="footer__map-section-link">
+                    <a href="/" >Контроль подлинности упаковок по 3D</a>
                 </li>
             </ul>
         </div>
 
         <div class="footer__map-section footer__map-section-onlajn-uslugi">
-            <div class="footer__map-section-title">Заголовок 2</div>
+            <div class="footer__map-section-title">Энциклопедия БАД</div>
             <ul class="footer__map-section-links">
                 <li class="footer__map-section-link">
-                    <a href="/" >Меню 2.1</a>
+                    <a href="/" >Справочник БАД</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/" >Меню 2.2</a>
+                    <a href="/" >Классификация БАД</a>
                 </li>
                 <li class="footer__map-section-link">
                     <a href="/" >Меню 2.3</a>
@@ -58,16 +94,16 @@
         </div>
 
         <div class="footer__map-section footer__map-section-pomos-">
-            <div class="footer__map-section-title">Помощь</div>
+            <div class="footer__map-section-title">Новости и события</div>
             <ul class="footer__map-section-links">
                 <li class="footer__map-section-link">
-                    <a href="/popular-questions" >Популярные вопросы</a>
+                    <a href="/">Новости</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/napisat-v-cat-podderzki" >Написать в чат поддержки</a>
+                    <a href="/">Календарь событий</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/drugie-voprosy" >Другие вопросы</a>
+                    <a href="/drugie-voprosy">Другие вопросы</a>
                 </li>
             </ul>
         </div>
@@ -76,16 +112,13 @@
             <div class="footer__map-section-title">О компании</div>
             <ul class="footer__map-section-links">
                 <li class="footer__map-section-link">
-                    <a href="/news" >Новости</a>
+                    <a href="/missia-kompanii">Миссия компании</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/missia-kompanii" >Миссия компании</a>
+                    <a href="/rukovodstvo">Руководство</a>
                 </li>
                 <li class="footer__map-section-link">
-                    <a href="/rukovodstvo" >Руководство</a>
-                </li>
-                <li class="footer__map-section-link">
-                    <a href="/kontakty" >Контакты</a>
+                    <a href="/kontakty">Контакты</a>
                 </li>
             </ul>
         </div>

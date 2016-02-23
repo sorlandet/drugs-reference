@@ -1,52 +1,37 @@
 {% extends 'base.html' %}
 
-{% block title %}Поиск - {{ block.super }}{% endblock %}
+{% block title %}Поиск{% endblock %}
 
 {% block body_class %}gray-footer yui3-skin-sam controls-visible guest-site signed-out public-page site{% endblock %}
 
 {% block main %}
-<div class="columns-1" id="main-content" role="main">
-    <div class="portlet-layout row-fluid">
-        <div class="portlet-column portlet-column-only span12" id="column-1">
-            <div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-1">
-                <div class="portlet-boundary portlet-boundary_trackingPortlet_WAR_portalportlet_ portlet-static portlet-static-end portlet-borderless " id="p_p_id_trackingPortlet_WAR_portalportlet_" >
-                    <span id="p_trackingPortlet_WAR_portalportlet"></span>
-                    <div class="portlet-borderless-container" style="">
-                        <div class="portlet-body">
-
-                            <div class="page-tracking">
-                                <div>
-                                    <div class="tracking-page-container">
-                                        <div class="tracking-page">
-                                            <div class="tracking-page__header">
-                                                <div class="tracking-page__title">Поиск препарата</div>
-                                            </div>
-                                            <div class="input input--search tracking-page__input">
-                                                <div class="input__placeholder" style="padding-left: 10px;">Введите название или действующее вещество</div>
-                                                <input type="text" value="">
-                                                <div class="input__btn-search"></div>
-                                            </div>
-                                            <div class="tracking-page__help-items">
-                                                <div class="tracking-page__help-item">
-                                                    <a href="/support/popular-questions/products-location">Как узнать трек-номер</a>
-                                                </div>
-                                                <div class="tracking-page__help-item" data-reactid=".1.0.0.2.$1">
-                                                    <a href="/support/post-rules/receiving-sending" data-reactid=".1.0.0.2.$1.0">Получение отправлений</a>
-                                                </div>
-                                                <div class="tracking-page__help-item" data-reactid=".1.0.0.2.$2">
-                                                    <a href="/support/claims/lost-sendings" data-reactid=".1.0.0.2.$2.0">Розыск отправлений</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
+<div class="page-tracking">
+    <div>
+        <div class="tracking-page-container">
+            <div class="tracking-page">
+                <div class="tracking-page__header">
+                    <div class="tracking-page__title">Поиск препарата</div>
+                </div>
+                <div class="input input--search tracking-page__input">
+                    <div class="input__placeholder" style="padding-left: 10px;">Введите название или действующее вещество</div>
+                    <input type="text" value="">
+                    <div class="input__btn-search"></div>
+                </div>
+                <div class="tracking-page__help-items">
+                    <div class="tracking-page__help-item">
+                        <a href="/support/popular-questions/products-location">Как узнать трек-номер</a>
+                    </div>
+                    <div class="tracking-page__help-item" data-reactid=".1.0.0.2.$1">
+                        <a href="/support/post-rules/receiving-sending" data-reactid=".1.0.0.2.$1.0">Получение отправлений</a>
+                    </div>
+                    <div class="tracking-page__help-item" data-reactid=".1.0.0.2.$2">
+                        <a href="/support/claims/lost-sendings" data-reactid=".1.0.0.2.$2.0">Розыск отправлений</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
+
 {% endblock %}

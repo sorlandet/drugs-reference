@@ -17,13 +17,15 @@ from django.conf import settings
 from django.conf.urls import url, static
 from django.contrib import admin
 
-from mysite.apps.experimental.views import IndexView
+from mysite.apps.experimental import views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'', IndexView.as_view())
+    url(r'^alphabet/', views.AlphabetView.as_view(), name='alphabet'),
+    url(r'^search/', views.SearchView.as_view(), name='search'),
+    url(r'', views.IndexView.as_view(), name='home')
 ]
 
 urlpatterns += static.static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

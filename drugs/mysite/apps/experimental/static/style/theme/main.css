@@ -2370,7 +2370,7 @@ body:first-of-type .portlet-content:hover .lfr-icon-actions .taglib-text {
   .aui .alert, .aui .portlet-msg-alert, .aui .portlet-msg-error, .aui .portlet-msg-help, .aui .portlet-msg-info, .aui .portlet-msg-progress, .aui .portlet-msg-success {
     word-wrap: break-word; }
   .aui .table {
-    font-size: 15px;
+    font-size: 11px;
     overflow: hidden; }
     .aui .table td {
       background-color: #F9F9F9; }
