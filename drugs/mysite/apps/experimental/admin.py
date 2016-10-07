@@ -10,7 +10,7 @@ class ActiveComponentInline(admin.StackedInline):
 
 class RawAdmin(admin.ModelAdmin):
     list_filter = ['phase1', 'phase2', 'phase3']
-    list_display = ['title_orig', 'title_rus', 'url', 'phase1', 'phase2', 'phase3']
+    list_display = ['title_orig', 'title_rus', 'alf_en', 'alf_ru', 'url', 'phase1', 'phase2', 'phase3']
     fields = ['title_orig', 'title_rus', 'context', 'url', 'active_components', 'atc_code']
     search_fields = ['title_orig', 'title_rus']
 

@@ -4,6 +4,10 @@ from django.db import models
 class Raw(models.Model):
     title_orig = models.CharField(max_length=255)
     title_rus = models.CharField(max_length=255)
+
+    alf_en = models.CharField(max_length=2, null=True)
+    alf_ru = models.CharField(max_length=2, null=True)
+
     context = models.TextField()
     url = models.CharField(max_length=255, unique=True)
 
