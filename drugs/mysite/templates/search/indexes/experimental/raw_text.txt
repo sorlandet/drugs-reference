@@ -1,0 +1,4 @@
+{{ object.title_rus }}
+{{ object.title_orig }}
+{{ object.context }}
+{{ object.atc_code }}

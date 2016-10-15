@@ -2505,7 +2505,7 @@ html.rpst-portal.aui .header-container--hidden {
 }
 html.rpst-portal.aui .header__logo {
   display: block;
-  background-image: url('img/logo-rp.png');
+  background-image: url('http://lorempixel.com/g/120/60/');
   background-repeat: no-repeat;
   width: 120px;
   height: 60px;
